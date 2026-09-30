@@ -1,4 +1,6 @@
 # 🌐 Language Translation Tool
+Live Demo : code-alpha-language-translation-too-lovat.vercel.app
+backend : https://codealpha-languagetranslationtool-yc9h.onrender.com
 
 A full-stack web application that translates text between multiple languages and provides audio pronunciation for translated text.
 
