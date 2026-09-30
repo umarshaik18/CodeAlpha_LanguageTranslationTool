@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #1e293b;
+  padding: 40px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.header p {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.translator-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.1);
+}
+
+.language-row {
+  display: flex;
+  align-items: end;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.language-box {
+  flex: 1;
+}
+
+.language-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.language-box select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: white;
+  color: #1e293b;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-box select:focus {
+  border-color: #4f46e5;
+}
+
+.swap-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.swap-button:hover {
+  background: #e0e7ff;
+  transform: rotate(180deg);
+}
+
+.translation-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.input-section,
+.output-section {
+  position: relative;
+  min-height: 260px;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.input-section textarea {
+  width: 100%;
+  height: 260px;
+  padding: 18px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.input-section textarea::placeholder {
+  color: #94a3b8;
+}
+
+.character-count {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.output-section {
+  padding: 18px;
+}
+
+.translation-text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.placeholder-text {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.error {
+  margin-top: 18px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.translate-button,
+.copy-button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.translate-button {
+  background: #4f46e5;
+  color: white;
+}
+
+.translate-button:hover:not(:disabled) {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.copy-button {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.copy-button:hover:not(:disabled) {
+  background: #cbd5e1;
+}
+
+.translate-button:disabled,
+.copy-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #334155;
+}
+
+.language-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.language-tag {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 35px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .app {
+    padding: 25px 15px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .translator-card {
+    padding: 20px;
+  }
+
+  .translation-area {
+    grid-template-columns: 1fr;
+  }
+
+  .language-row {
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .language-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .swap-button {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+
+  .swap-button:hover {
+    transform: rotate(270deg);
+  }
+
+  .translator-card {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .translate-button,
+  .copy-button {
+    width: 100%;
+  }
+}
