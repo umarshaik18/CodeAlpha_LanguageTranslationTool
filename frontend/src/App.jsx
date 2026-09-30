@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
-const API_URL = "https://codealpha-languagetranslationtool-yc9h.onrender.com";
+const API_URL = "http://127.0.0.1:8000";
+
 
 const languages = [
   { code: "en", name: "English" },
